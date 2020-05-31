@@ -5,7 +5,7 @@ var svgHeight = 500;
 var margin = {
   top: 20,
   right: 40,
-  bottom: 80,
+  bottom: 99,
   left: 100
 };
 
@@ -118,7 +118,7 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
   
   var toolTip = d3.tip()
     .attr("class", "tooltip")
-    .offset([80, -60])
+    .offset([-8, 0])
     .html(function(d) {
       return (`${d.state}<br>${xLabel} ${d[chosenXAxis]}<br>${yLabel} ${d[chosenYAxis]}%`);
     });
@@ -179,7 +179,7 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
     .classed("stateCircle", true)
     .attr("cx", d => xLinearScale(d[chosenXAxis]))
     .attr("cy", d => yLinearScale(d[chosenYAxis]))
-    .attr("r", 20)
+    .attr("r", 15)
     .attr("fill", "pink")
     .attr("opacity", ".5");
 
